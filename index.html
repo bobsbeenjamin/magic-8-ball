@@ -2,9 +2,18 @@
 <html>
 <head>
   <meta name="description" content="🎱 Magic 8 Ball">
+  <style>
+    #textDisplayArea {
+      animation: fadein 2s infinite;
+    }
+    @keyframes fadein {
+      from { opacity: 0}
+      to   { opacity: 1}
+    }
+  </style>
   <script>
     function updateAnswer() {
-      textArea = document.getElementById("textDisplayArea");
+      let textArea = document.getElementById("textDisplayArea");
       let answers = ["Yes", "No", "Try Again", "Ask Timmy",];
       textArea.innerHTML = answers[Math.floor(Math.random() * answers.length)];
     }
