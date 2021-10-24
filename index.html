@@ -5,7 +5,9 @@
   <script>
     function updateAnswer() {
       textArea = document.getElementById("textDisplayArea");
-      textArea.innerHTML = "test";
+      textArea.innerHTML = _.sample([
+        "Yes", "No", "Try Again",
+      ]);
     }
   </script>
 </head>
