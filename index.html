@@ -5,9 +5,8 @@
   <script>
     function updateAnswer() {
       textArea = document.getElementById("textDisplayArea");
-      textArea.innerHTML = _.sample([
-        "Yes", "No", "Try Again",
-      ]);
+      let answers = ["Yes", "No", "Try Again",];
+      textArea.innerHTML = answers[Math.floor(Math.random() * answers.length)];
     }
   </script>
 </head>
