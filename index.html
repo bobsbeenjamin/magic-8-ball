@@ -15,7 +15,11 @@
     function updateAnswer() {
       let textArea = document.getElementById("textDisplayArea");
       let answers = ["Yes", "No", "Try Again", "Ask Timmy",];
-      textArea.innerHTML = answers[Math.floor(Math.random() * answers.length)];
+      textArea.innerHTML = getAnswer(answers);
+    }
+    
+    function getAnswer(answerList) {
+      return answerList[Math.floor(Math.random() * answerList.length)];
     }
   </script>
 </head>
